@@ -44,7 +44,13 @@ then
                 VERBOSE="true"
         fi
 
-        for OUTER_LOOP_LIB_FILENAME in $TARGET_DIR/*ud*.dylib
+        # shorten any dylib names like "*.5.1.1.dylib" so that they are simply:  *.5.dylib
+        for OUTER_LOOP_LIB_FILENAME in $TARGET_DIR/*.dylib
+        do
+                mv "$OUTER_LOOP_LIB_FILENAME" "${OUTER_LOOP_LIB_FILENAME/.5.1.1/.5}"
+        done # shortening the 5.1.1 names
+
+        for OUTER_LOOP_LIB_FILENAME in $TARGET_DIR/*.dylib
         do
 
             # strip off any path, even a path as small as "./"
@@ -81,7 +87,7 @@ then
                         #                                Ensure that the linkage is a fixed reference.
                         #                        }
                         #         }
-                        for INNER_LOOP_LIB_FILENAME in $TARGET_DIR/*ud*.dylib
+                        for INNER_LOOP_LIB_FILENAME in $TARGET_DIR/*.dylib
                         do
                                 # strip off any path, even as small a path as "./"
                                 INNER_LOOP_LIB_FILENAME_BASENAME=`basename "$INNER_LOOP_LIB_FILENAME"`
