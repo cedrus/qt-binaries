@@ -1,0 +1,14 @@
+prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 PrintSupport
+Description: Qt PrintSupport module
+Version: 5.1.1
+Libs: -L${libdir} -lQt5PrintSupport 
+Libs.private: -framework Cocoa -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Widgets -lQt5Gui -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtPrintSupport -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+
