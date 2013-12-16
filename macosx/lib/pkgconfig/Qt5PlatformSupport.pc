@@ -8,7 +8,7 @@ Name: Qt5 PlatformSupport
 Description: Qt PlatformSupport module
 Version: 5.1.1
 Libs: -L${libdir} -lQt5PlatformSupport 
-Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Gui -lQt5Core -lz -framework Cocoa -framework OpenGL -L/sw/lib -lgthread-2.0 -lglib-2.0 -lintl -framework ApplicationServices -framework AGL  
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Gui -lQt5Core -lz -framework Cocoa -framework OpenGL -framework ApplicationServices -framework AGL  
 Cflags: -I${includedir}/QtPlatformSupport -I${includedir}
 Requires: Qt5Core Qt5Gui
 

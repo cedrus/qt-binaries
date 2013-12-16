@@ -7,7 +7,7 @@ QT_HOST_CPU_FEATURES =  mmx sse sse2
 QMAKE_DEFAULT_LIBDIRS = "/lib" "/usr/lib" 
 QMAKE_DEFAULT_INCDIRS = "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1" "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/i686-apple-darwin10" "/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward" "/Developer/SDKs/MacOSX10.6.sdk/usr/local/include" "/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include" "/Developer/SDKs/MacOSX10.6.sdk/usr/include" 
 QT_EDITION = Preview
-QT_CONFIG +=  minimal-config small-config medium-config large-config full-config build_all debug_and_release fontconfig coreservices accessibility opengl shared qpa reduce_exports getaddrinfo ipv6ifname getifaddrs png system-freetype system-zlib nis cups iconv glib dbus openssl rpath corewlan concurrent audio-backend v8 v8snapshot release debug
+QT_CONFIG +=  minimal-config small-config medium-config large-config full-config build_all debug_and_release no-pkg-config coreservices accessibility opengl shared qpa reduce_exports getaddrinfo ipv6ifname getifaddrs png freetype system-zlib nis cups iconv openssl rpath corewlan concurrent audio-backend v8 v8snapshot release debug
 
 #versioning
 QT_VERSION = 5.1.1

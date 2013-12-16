@@ -3,12 +3,6 @@ QT_BUILD_PARTS += libs tools examples
 QT_LFLAGS_ODBC   = -lodbc
 DEFINES *= QT_EDITION=QT_EDITION_DESKTOP
 styles += mac fusion windows
-QT_CFLAGS_DBUS = -I/sw/include/dbus-1.0 -I/sw/lib/dbus-1.0/include
-QT_LIBS_DBUS = -L/sw/lib -ldbus-1 -lpthread
-QT_CFLAGS_GLIB = -I/sw/include/glib-2.0 -I/sw/lib/glib-2.0/include
-QT_LIBS_GLIB = -L/sw/lib -lgthread-2.0 -lglib-2.0 -lintl
-QMAKE_CFLAGS_FONTCONFIG = -I/sw/include/freetype2 -I/sw/include -I/usr/X11/include
-QMAKE_LIBS_FONTCONFIG = -L/sw/lib -L/usr/X11/lib -Wl,-framework,CoreServices -Wl,-framework,ApplicationServices -lfontconfig -lfreetype -lz
 DEFINES += QT_NO_LIBUDEV
 DEFINES += QT_NO_EVDEV
 DEFINES += QT_NO_XCB
