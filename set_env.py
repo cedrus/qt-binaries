@@ -13,6 +13,8 @@ if script_path != curr_path:
     print 'FAIL. the whole POINT is to run this FROM the directory it came in. go there and run exactly: ./set_env.py'
     exit()
 
+#todo: the rest of this is clearly mac-specific. need win32 variant
+
 # the file actually has the extention 'plist', but the call to 'defaults write' wants us to OMIT that suffix
 environment_plist_path = os.path.expanduser("~/.MacOSX/environment")
 
