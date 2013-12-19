@@ -1,2 +1,2 @@
-qt-binaries
+QT-binaries
 ===========
