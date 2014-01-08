@@ -58,8 +58,8 @@ SCons.Warnings.enableWarningClass(ToolQtWarning)
 header_extensions = [".h", ".hxx", ".hpp", ".hh"]
 if SCons.Util.case_sensitive_suffixes('.h', '.H'):
     header_extensions.append('.H')
-cplusplus = __import__('c++', globals(), locals(), [])
-cxx_suffixes = cplusplus.CXXSuffixes
+
+cxx_suffixes = ['.cpp', '.cc', '.cxx', '.c++', '.C++', '.mm', '.C']
 
 def checkMocIncluded(target, source, env):
     moc = target[0]
@@ -96,7 +96,7 @@ class _Automoc(object):
         or Lib. Adds objects and builders for the special qt files.
         """
         try:
-            if int(env.subst('$QT_AUTOSCAN')) == 0:
+            if True: # always disable autoscan
                 return target, source
         except ValueError:
             pass
@@ -320,11 +320,11 @@ def generate(env):
     # correctly later by our emitter.
     env.AppendUnique(PROGEMITTER =[AutomocStatic],
                      SHLIBEMITTER=[AutomocShared],
-                     LIBEMITTER  =[AutomocStatic],
+                     LIBEMITTER  =[AutomocStatic])
                      # Of course, we need to link against the qt libraries
-                     CPPPATH=["$QT_CPPPATH"],
-                     LIBPATH=["$QT_LIBPATH"],
-                     LIBS=['$QT_LIB'])
+                     #CPPPATH=["$QT_CPPPATH"],#cedrus-commentout
+                     #LIBPATH=["$QT_LIBPATH"],#cedrus-commentout
+                     #LIBS=['$QT_LIB'])#cedrus-commentout
 
 def exists(env):
     return _detect(env)
