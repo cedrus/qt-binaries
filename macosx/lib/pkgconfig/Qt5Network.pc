@@ -1,0 +1,14 @@
+prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Network
+Description: Qt Network module
+Version: 5.1.1
+Libs: -L${libdir} -lQt5Network 
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Core -lz -framework Security -framework SystemConfiguration -framework CoreFoundation -framework CoreServices  
+Cflags: -I${includedir}/QtNetwork -I${includedir}
+Requires: Qt5Core
+

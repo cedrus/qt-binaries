@@ -1,0 +1,14 @@
+prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 ScriptTools
+Description: Qt ScriptTools module
+Version: 5.1.1
+Libs: -L${libdir} -lQt5ScriptTools 
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Core -lQt5Widgets -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Script -lQt5Gui -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtScriptTools -I${includedir}
+Requires: Qt5Core
+
