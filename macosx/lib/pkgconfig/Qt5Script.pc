@@ -1,4 +1,4 @@
-prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+prefix=/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx/
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
@@ -8,7 +8,7 @@ Name: Qt5 Script
 Description: Qt Script module
 Version: 5.1.1
 Libs: -L${libdir} -lQt5Script 
-Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Core -framework CoreServices  
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5Core -framework CoreServices  
 Cflags: -I${includedir}/QtScript -I${includedir}
 Requires: Qt5Core
 

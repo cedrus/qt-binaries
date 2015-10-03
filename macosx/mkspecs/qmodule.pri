@@ -1,7 +1,8 @@
-CONFIG +=  compile_examples qpa largefile precompile_header sse2 sse3 ssse3 sse4_1 sse4_2 absolute_library_soname pcre
+CONFIG +=  compile_examples qpa largefile precompile_header sse2 sse3 ssse3 sse4_1 sse4_2 avx avx2 absolute_library_soname pcre
 QT_BUILD_PARTS += libs tools examples
 QT_LFLAGS_ODBC   = -lodbc
-DEFINES *= QT_EDITION=QT_EDITION_DESKTOP
+QMAKE_CXXFLAGS = -std=c++11 -stdlib=libc++
+QMAKE_LFLAGS = -stdlib=libc++
 styles += mac fusion windows
 DEFINES += QT_NO_LIBUDEV
 DEFINES += QT_NO_EVDEV

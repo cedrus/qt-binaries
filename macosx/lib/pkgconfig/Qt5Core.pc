@@ -1,10 +1,10 @@
-prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+prefix=/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx/
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
 host_bins=${prefix}/bin
-qt_config=minimal-config small-config medium-config large-config full-config build_all debug_and_release no-pkg-config coreservices accessibility opengl shared qpa reduce_exports getaddrinfo ipv6ifname getifaddrs png freetype system-zlib nis cups iconv openssl rpath corewlan concurrent audio-backend v8 v8snapshot release debug
+qt_config=minimal-config small-config medium-config large-config full-config build_all debug_and_release no-pkg-config coreservices c++11 accessibility opengl shared qpa reduce_exports getaddrinfo ipv6ifname getifaddrs png freetype system-zlib nis cups iconv openssl rpath corewlan concurrent audio-backend v8 v8snapshot release debug
 
 Name: Qt5 Core
 Description: Qt Core module

@@ -1,4 +1,4 @@
-prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+prefix=/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx/
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
@@ -8,7 +8,7 @@ Name: Qt5 XmlPatterns
 Description: Qt XmlPatterns module
 Version: 5.1.1
 Libs: -L${libdir} -lQt5XmlPatterns 
-Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Network -lQt5Core   
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5Network -lQt5Core   
 Cflags: -I${includedir}/QtXmlPatterns -I${includedir}
 Requires: Qt5Core Qt5Network
 

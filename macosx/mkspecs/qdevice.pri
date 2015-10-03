@@ -1,1 +1,1 @@
-GCC_MACHINE_DUMP = i686-apple-darwin10
+GCC_MACHINE_DUMP = x86_64-apple-darwin12.6.0

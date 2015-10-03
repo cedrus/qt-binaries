@@ -43,7 +43,7 @@ set_property(TARGET Qt5::Core APPEND PROPERTY
   COMPATIBLE_INTERFACE_STRING QT_MAJOR_VERSION
 )
 
-set(_qt5_corelib_extra_includes "${_qt5Core_install_prefix}//mkspecs/macx-g++-32")
+set(_qt5_corelib_extra_includes "${_qt5Core_install_prefix}//mkspecs/macx-clang")
 foreach(_dir ${_qt5_corelib_extra_includes})
     _qt5_Core_check_file_exists(${_dir})
 endforeach()

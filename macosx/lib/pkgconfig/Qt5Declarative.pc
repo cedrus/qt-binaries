@@ -1,4 +1,4 @@
-prefix=/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx/
+prefix=/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx/
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
@@ -8,7 +8,7 @@ Name: Qt5 Declarative
 Description: Qt Declarative module
 Version: 5.1.1
 Libs: -L${libdir} -lQt5Declarative 
-Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5XmlPatterns -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Widgets -lQt5Network -lQt5Sql -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Script -lQt5Gui -lQt5Core -lQt5XmlPatterns -L/Users/kkheller/Documents/gitgitgit/SL/one/3_in_1_repo/qt-binaries/macosx//lib -lQt5Network -lQt5Core -framework OpenGL -framework AGL  
+Libs.private: -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5XmlPatterns -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5Widgets -lQt5Network -lQt5Sql -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5Script -lQt5Gui -lQt5Core -lQt5XmlPatterns -L/Users/kkheller/Documents/gitgitgit/SL/COMP/comp3/qt-binaries/macosx//lib -lQt5Network -lQt5Core -framework OpenGL -framework AGL  
 Cflags: -I${includedir}/QtDeclarative -I${includedir}
 Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Script
 
