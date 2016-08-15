@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Help
+Description: Qt Help module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Help 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt5Widgets -framework DiskArbitration -framework IOKit -lQt5Gui -lQt5Core -lQt5Network -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -lQt5Sql -L/Users/osipyan/Qt_build/stage/lib -lQt5CLucene -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtHelp -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

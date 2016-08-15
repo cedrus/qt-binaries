@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Gamepad
+Description: Qt Gamepad module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Gamepad 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt5Gui -framework DiskArbitration -framework IOKit -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtGamepad -I${includedir}
+Requires: Qt5Core Qt5Gui
+

@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 QuickControls2
+Description: Qt QuickControls2 module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5QuickControls2 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt5Quick -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -L/Users/osipyan/Qt_build/stage/lib -lQt5QuickTemplates2 -L/Users/osipyan/Qt_build/stage/lib -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtQuickControls2 -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Quick
+

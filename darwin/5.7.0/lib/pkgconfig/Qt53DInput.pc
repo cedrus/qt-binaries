@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DInput
+Description: Qt 3DInput module
+Version: 5.7.0
+Libs: -L${libdir} -lQt53DInput 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt53DCore -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -L/Users/osipyan/Qt_build/stage/lib -lQt5Gamepad -lQt5Gui -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/Qt3DInput -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore Qt5Gamepad
+

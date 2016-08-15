@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Location
+Description: Qt Location module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Location 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt5Positioning -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -L/Users/osipyan/Qt_build/stage/lib -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtLocation -I${includedir}
+Requires: Qt5Core Qt5Positioning Qt5Gui Qt5Quick
+

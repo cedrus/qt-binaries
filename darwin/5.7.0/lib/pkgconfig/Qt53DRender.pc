@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DRender
+Description: Qt 3DRender module
+Version: 5.7.0
+Libs: -L${libdir} -lQt53DRender 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt53DCore -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -lQt5Gui -lQt5Concurrent -lQt5Core -lQt5OpenGLExtensions -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -framework OpenGL -framework AGL -lQt5Gui -lQt5Core  
+Cflags: -I${includedir}/Qt3DRender -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore
+

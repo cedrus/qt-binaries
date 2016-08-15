@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Multimedia
+Description: Qt Multimedia module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Multimedia 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt5Network -framework DiskArbitration -framework IOKit -lQt5Gui -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/QtMultimedia -I${includedir}
+Requires: Qt5Core Qt5Network Qt5Gui
+

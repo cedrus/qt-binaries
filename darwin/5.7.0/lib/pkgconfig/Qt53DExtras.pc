@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DExtras
+Description: Qt 3DExtras module
+Version: 5.7.0
+Libs: -L${libdir} -lQt53DExtras 
+Libs.private: -L/Users/osipyan/Qt_build/stage/lib -lQt53DRender -L/Users/osipyan/Qt_build/stage/lib -framework DiskArbitration -framework IOKit -lQt53DInput -L/Users/osipyan/Qt_build/stage/lib -lQt53DLogic -lQt53DCore -lQt5Gamepad -lQt5Gui -lQt5Concurrent -lQt5Core -framework OpenGL -framework AGL  
+Cflags: -I${includedir}/Qt3DExtras -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore Qt53DRender Qt53DInput Qt53DLogic
+

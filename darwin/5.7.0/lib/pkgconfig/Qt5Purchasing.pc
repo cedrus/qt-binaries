@@ -1,0 +1,14 @@
+prefix=/Users/osipyan/Qt_build/stage
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Purchasing
+Description: Qt Purchasing module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Purchasing 
+Libs.private: -framework StoreKit -framework Foundation -L/Users/osipyan/Qt_build/stage/lib -lQt5Core -framework DiskArbitration -framework IOKit   
+Cflags: -I${includedir}/QtPurchasing -I${includedir}
+Requires: Qt5Core
+
