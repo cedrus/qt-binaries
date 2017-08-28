@@ -42,7 +42,7 @@
 
 #include <QtMultimedia/qmediaobject.h>
 #include <QtMultimedia/qmediacontent.h>
-#include <QtMultimedia/qmediaenumdebug.h>
+//#include <QtMultimedia/qmediaenumdebug.h>
 #include <QtMultimedia/qaudio.h>
 
 #include <QtNetwork/qnetworkconfiguration.h>
@@ -227,8 +227,8 @@ Q_DECLARE_METATYPE(QMediaPlayer::State)
 Q_DECLARE_METATYPE(QMediaPlayer::MediaStatus)
 Q_DECLARE_METATYPE(QMediaPlayer::Error)
 
-Q_MEDIA_ENUM_DEBUG(QMediaPlayer, State)
-Q_MEDIA_ENUM_DEBUG(QMediaPlayer, MediaStatus)
-Q_MEDIA_ENUM_DEBUG(QMediaPlayer, Error)
+//Q_MEDIA_ENUM_DEBUG(QMediaPlayer, State)
+//Q_MEDIA_ENUM_DEBUG(QMediaPlayer, MediaStatus)
+//Q_MEDIA_ENUM_DEBUG(QMediaPlayer, Error)
 
 #endif  // QMEDIAPLAYER_H
