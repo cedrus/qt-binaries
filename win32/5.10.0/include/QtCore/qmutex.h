@@ -67,6 +67,12 @@ class QMutexData;
 class Q_CORE_EXPORT QBasicMutex
 {
 public:
+#ifdef Q_COMPILER_CONSTEXPR
+    constexpr QBasicMutex()
+        : d_ptr(nullptr)
+    {}
+#endif
+
     // BasicLockable concept
     inline void lock() QT_MUTEX_LOCK_NOEXCEPT {
         if (!fastTryLock())
@@ -251,7 +257,7 @@ class Q_CORE_EXPORT QMutex
 public:
     enum RecursionMode { NonRecursive, Recursive };
 
-    inline explicit QMutex(RecursionMode mode = NonRecursive) Q_DECL_NOTHROW { Q_UNUSED(mode); }
+    inline Q_DECL_CONSTEXPR explicit QMutex(RecursionMode = NonRecursive) Q_DECL_NOTHROW { }
 
     inline void lock() Q_DECL_NOTHROW {}
     inline bool tryLock(int timeout = 0) Q_DECL_NOTHROW { Q_UNUSED(timeout); return true; }

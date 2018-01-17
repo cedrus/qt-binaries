@@ -145,9 +145,14 @@ struct QAbstractItemAdapterSourceAPI : public SourceApiMap
 
     QString name() const override { return m_name; }
     QString typeName() const override { return QStringLiteral("QAbstractItemModelAdapter"); }
+    int enumCount() const override { return 0; }
     int propertyCount() const override { return _properties[0]; }
     int signalCount() const override { return _signals[0]; }
     int methodCount() const override { return _methods[0]; }
+    int sourceEnumIndex(int /*index*/) const override
+    {
+        return -1;
+    }
     int sourcePropertyIndex(int index) const override
     {
         if (index < 0 || index >= _properties[0])
@@ -168,6 +173,14 @@ struct QAbstractItemAdapterSourceAPI : public SourceApiMap
     }
     int signalParameterCount(int index) const override { return signalArgCount[index]; }
     int signalParameterType(int sigIndex, int paramIndex) const override { return signalArgTypes[sigIndex][paramIndex]; }
+    QList<QByteArray> signalParameterNames(int index) const override
+    {
+        QList<QByteArray> res;
+        int count = signalParameterCount(index);
+        while (count--)
+            res << QByteArray{};
+        return res;
+    }
     int methodParameterCount(int index) const override { return methodArgCount[index]; }
     int methodParameterType(int methodIndex, int paramIndex) const override { return methodArgTypes[methodIndex][paramIndex]; }
     int propertyIndexFromSignal(int index) const override
@@ -226,6 +239,16 @@ struct QAbstractItemAdapterSourceAPI : public SourceApiMap
         }
         return QByteArrayLiteral("");
     }
+
+    QList<QByteArray> methodParameterNames(int index) const override
+    {
+        QList<QByteArray> res;
+        int count = methodParameterCount(index);
+        while (count--)
+            res << QByteArray{};
+        return res;
+    }
+
     QByteArray objectSignature() const override { return QByteArray{}; }
     bool isAdapterSignal(int index) const override
     {

@@ -1,7 +1,6 @@
 #define QT_FEATURE_networkinterface 1
 #define QT_FEATURE_bearermanagement 1
 #define QT_FEATURE_ftp 1
-#define QT_NO_GETADDRINFO 
 #define QT_NO_GETIFADDRS 
 #define QT_FEATURE_http 1
 #define QT_NO_IPV6IFNAME 

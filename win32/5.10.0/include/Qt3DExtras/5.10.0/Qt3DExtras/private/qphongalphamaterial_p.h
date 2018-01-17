@@ -62,6 +62,7 @@ class QEffect;
 class QTechnique;
 class QParameter;
 class QShaderProgram;
+class QShaderProgramBuilder;
 class QRenderPass;
 class QNoDepthMask;
 class QBlendEquationArguments;
@@ -84,14 +85,12 @@ public:
     void handleDiffuseChanged(const QVariant &var);
     void handleSpecularChanged(const QVariant &var);
     void handleShininessChanged(const QVariant &var);
-    void handleAlphaChanged(const QVariant &var);
 
     Qt3DRender::QEffect *m_phongEffect;
     Qt3DRender::QParameter *m_ambientParameter;
     Qt3DRender::QParameter *m_diffuseParameter;
     Qt3DRender::QParameter *m_specularParameter;
     Qt3DRender::QParameter *m_shininessParameter;
-    Qt3DRender::QParameter *m_alphaParameter;
     Qt3DRender::QTechnique *m_phongAlphaGL3Technique;
     Qt3DRender::QTechnique *m_phongAlphaGL2Technique;
     Qt3DRender::QTechnique *m_phongAlphaES2Technique;
@@ -99,7 +98,9 @@ public:
     Qt3DRender::QRenderPass *m_phongAlphaGL2RenderPass;
     Qt3DRender::QRenderPass *m_phongAlphaES2RenderPass;
     Qt3DRender::QShaderProgram *m_phongAlphaGL3Shader;
+    Qt3DRender::QShaderProgramBuilder *m_phongAlphaGL3ShaderBuilder;
     Qt3DRender::QShaderProgram *m_phongAlphaGL2ES2Shader;
+    Qt3DRender::QShaderProgramBuilder *m_phongAlphaGL2ES2ShaderBuilder;
     Qt3DRender::QNoDepthMask *m_noDepthMask;
     Qt3DRender::QBlendEquationArguments *m_blendState;
     Qt3DRender::QBlendEquation *m_blendEquation;

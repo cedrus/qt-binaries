@@ -1,5 +1,5 @@
 #define QT_FEATURE_clock_gettime -1
-#define QT_FEATURE_cxx11_random 1
+#define QT_FEATURE_datetimeparser 1
 #define QT_FEATURE_dlopen -1
 #define QT_FEATURE_doubleconversion 1
 #define QT_FEATURE_futimens -1
@@ -13,6 +13,7 @@
 #define QT_FEATURE_iconv -1
 #define QT_FEATURE_inotify -1
 #define QT_FEATURE_journald -1
+#define QT_FEATURE_linkat -1
 #define QT_FEATURE_renameat2 -1
 #define QT_FEATURE_sha3_fast 1
 #define QT_FEATURE_slog2 -1

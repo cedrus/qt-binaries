@@ -121,7 +121,7 @@ inline qfloat16::qfloat16(float f) Q_DECL_NOTHROW
     __m128i packhalf = _mm_cvtps_ph(packsingle, 0);
     b16 = _mm_extract_epi16(packhalf, 0);
 #elif defined (__ARM_FP16_FORMAT_IEEE)
-    __fp16 f16 = f;
+    __fp16 f16 = __fp16(f);
     memcpy(&b16, &f16, sizeof(quint16));
 #else
     quint32 u;
@@ -167,7 +167,8 @@ inline qfloat16 operator/(qfloat16 a, qfloat16 b) Q_DECL_NOTHROW { return qfloat
     inline FP operator OP(qfloat16 lhs, FP rhs) Q_DECL_NOTHROW { return static_cast<FP>(lhs) OP rhs; } \
     inline FP operator OP(FP lhs, qfloat16 rhs) Q_DECL_NOTHROW { return lhs OP static_cast<FP>(rhs); }
 #define QF16_MAKE_ARITH_OP_EQ_FP(FP, OP_EQ, OP) \
-    inline qfloat16& operator OP_EQ(qfloat16& lhs, FP rhs) Q_DECL_NOTHROW { lhs = qfloat16(static_cast<FP>(lhs) OP rhs); return lhs; }
+    inline qfloat16& operator OP_EQ(qfloat16& lhs, FP rhs) Q_DECL_NOTHROW \
+    { lhs = qfloat16(float(static_cast<FP>(lhs) OP rhs)); return lhs; }
 #define QF16_MAKE_ARITH_OP(FP) \
     QF16_MAKE_ARITH_OP_FP(FP, +) \
     QF16_MAKE_ARITH_OP_FP(FP, -) \

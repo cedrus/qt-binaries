@@ -103,8 +103,6 @@
 #include "qvector2d.h"
 #include "qvector3d.h"
 #include "qvector4d.h"
-#include "qvulkaninstance.h"
-#include "qvulkanwindow.h"
 #include "qwindow.h"
 #include "qwindowdefs.h"
 #include "qtguiversion.h"

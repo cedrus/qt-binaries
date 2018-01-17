@@ -15,6 +15,7 @@
 #include "qanimationcontroller.h"
 #include "qanimationgroup.h"
 #include "qblendedclipanimator.h"
+#include "qcallbackmapping.h"
 #include "qchannel.h"
 #include "qchannelcomponent.h"
 #include "qchannelmapper.h"

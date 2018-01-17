@@ -48,6 +48,7 @@ class QT3DANIMATIONSHARED_EXPORT QAnimationCallback
 {
 public:
     enum Flag {
+        OnOwningThread = 0x0,
         OnThreadPool = 0x01
     };
     Q_DECLARE_FLAGS(Flags, Flag)

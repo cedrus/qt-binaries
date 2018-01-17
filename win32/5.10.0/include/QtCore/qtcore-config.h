@@ -5,6 +5,7 @@
 #define QT_NO_CLOCK_MONOTONIC 
 #define QT_FEATURE_codecs 1
 #define QT_FEATURE_commandlineparser 1
+#define QT_FEATURE_cxx11_future 1
 #define QT_FEATURE_textdate 1
 #define QT_FEATURE_datestring 1
 #define QT_NO_EVENTFD 
